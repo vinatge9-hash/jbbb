@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Brew & Beans</title>
+  <meta name="description" content="Learn more about Brew & Beans, our story and values."></meta>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans antialiased">
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex-shrink-0">
+          <a href="index.html" class="text-2xl font-bold text-gray-800">Brew & Beans</a>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+            <a href="index.html" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md">Home</a>
+            <a href="menu.html" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md">Menu</a>
+            <a href="about.html" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md">About</a>
+            <a href="contact.html" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md">Contact</a>
+          </div>
+        </div>
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-gray-800 hover:text-gray-600 focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="index.html" class="block px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-md">Home</a>
+        <a href="menu.html" class="block px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-md">Menu</a>
+        <a href="about.html" class="block px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-md">About</a>
+        <a href="contact.html" class="block px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-md">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/13736138/pexels-photo-13736138.jpeg?auto=compress&cs=tinysrgb&h=650&w=940');">
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    <div class="relative z-10 text-center text-white px-4">
+      <h1 class="font-['Playfair_Display'] text-5xl md:text-6xl font-bold mb-4">Our Story</h1>
+      <p class="text-xl md:text-2xl mb-6 max-w-2xl mx-auto">Brew & Beans began as a neighborhood gathering spot where great coffee meets warm conversation. We source ethically, roast locally, and craft every cup with care.</p>
+    </div>
+  </section>
+
+  <section class="py-12 max-w-4xl mx-auto px-4 text-center">
+    <h2 class="font-['Playfair_Display'] text-3xl mb-4">Our Values</h2>
+    <p class="text-gray-700">Quality ingredients, friendly service, and community. We believe coffee can bring people together and spark good conversations.</p>
+  </section>
+
+  <footer class="bg-gray-900 text-white py-6">
+    <div class="max-w-7xl mx-auto px-4 text-center">© 2025 Brew & Beans. All rights reserved.</div>
+  </footer>
+
+  <script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
