@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brew & Beans - Coffee Shop</title>
+  <meta name="description" content="A modern coffee shop website with online ordering and MongoDB integration."></meta>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans antialiased">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex-shrink-0">
+          <a href="index.html" class="text-2xl font-bold text-gray-800">Brew & Beans</a>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+            <a href="index.html" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md">Home</a>
+            <a href="menu.html" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md">Menu</a>
+            <a href="about.html" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md">About</a>
+            <a href="contact.html" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md">Contact</a>
+          </div>
+        </div>
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-gray-800 hover:text-gray-600 focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="index.html" class="block px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-md">Home</a>
+        <a href="menu.html" class="block px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-md">Menu</a>
+        <a href="about.html" class="block px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-md">About</a>
+        <a href="contact.html" class="block px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-md">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero with background image -->
+  <section class="min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/1137745/pexels-photo-1137745.jpeg?auto=compress&cs=tinysrgb&h=650&w=940');">
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    <div class="relative z-10 text-center text-white px-4">
+      <h1 class="font-['Playfair_Display'] text-5xl md:text-6xl font-bold mb-4">Brew & Beans
+        <span class="block text-yellow-300">Coffee & Pastries</span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">A cozy neighborhood cafe offering handcrafted coffee, fresh pastries, and a warm, welcoming space.</p>
+      <a href="menu.html" class="inline-block bg-yellow-400 text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition-all duration-300">Order Online</a>
+    </div>
+  </section>
+
+  <!-- Featured drinks -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="font-['Playfair_Display'] text-3xl md:text-4xl mb-6 text-center">Featured Drinks</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <article class="bg-white rounded-lg shadow p-4 transition-all duration-300 hover:shadow-xl">
+          <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=800&auto=format&fit=crop" alt="Espresso cup" class="w-full h-40 object-cover rounded" />
+          <h3 class="mt-4 font-['Inter'] text-xl">Espresso</h3>
+          <p class="text-gray-600">Rich & balanced shot to start your day.</p>
+        </article>
+        <article class="bg-white rounded-lg shadow p-4 transition-all duration-300 hover:shadow-xl">
+          <img src="https://images.unsplash.com/photo-1603756682418-84ed1f3a9d42?q=80&w=800&auto=format&fit=crop" alt="Latte art" class="w-full h-40 object-cover rounded" />
+          <h3 class="mt-4 font-['Inter'] text-xl">Latte</h3>
+          <p class="text-gray-600">Silky milk, velvety espresso, perfect addition.</p>
+        </article>
+        <article class="bg-white rounded-lg shadow p-4 transition-all duration-300 hover:shadow-xl">
+          <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=800&auto=format&fit=crop" alt="Cappuccino" class="w-full h-40 object-cover rounded" />
+          <h3 class="mt-4 font-['Inter'] text-xl">Cappuccino</h3>
+          <p class="text-gray-600">Classic with airy foam and bite.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-white py-6">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <p class="text-sm">© 2025 Brew & Beans. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
